@@ -1,5 +1,5 @@
 const unobstructedWestViewCount = buildings => {
-  throw new Error('implement me!')
+  return buildings.reduce((visible, building) =>  visible.filter(b => b > building).concat(building), []).length
 }
 
 module.exports = { unobstructedWestViewCount }
